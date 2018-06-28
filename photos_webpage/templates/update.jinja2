@@ -2,10 +2,12 @@
 
 {% block content %}
 <h1>Selecione suas fotos novas</h1>
-<input type="file"
-               id="avatar" name="avatar"
-               accept="image/png, image/jpeg" />
-    </div>
+<div>
+	<form accept-charset="utf-8"  enctype="multipart/form-data" method="POST" action="{{ request.current_route_url() }}">
+		<input type="file" name="photo"  accept="image/png, image/jpeg" />
+		<input type="submit" name="send">
+	</form>
+</div>
 
 
-{% endblock content %}
+	{% endblock content %}
