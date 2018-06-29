@@ -1,13 +1,17 @@
 {% extends "layout.jinja2" %}
 
 {% block content %}
-<h1>Selecione suas fotos novas</h1>
+<h1>Selecione suas fotos novas</h1><br>
 <div>
-	<form accept-charset="utf-8"  enctype="multipart/form-data" method="POST" action="{{ request.current_route_url() }}">
-		<input type="file" name="photo"  accept="image/png, image/jpeg" />
-		<input type="submit" name="send">
+	<form class="was-validated" accept-charset="utf-8"  enctype="multipart/form-data" method="POST" action="{{ request.current_route_url() }}">
+		<div class="custom-file">
+			<input type="file" name="photo"  accept="image/png, image/jpeg" class="custom-file-input" id="validatedCustomFile" required>
+			<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+		</div>
+
+		<input type="submit" class="btn btn-primary" name="send">
 	</form>
 </div>
 
 
-	{% endblock content %}
+{% endblock content %}

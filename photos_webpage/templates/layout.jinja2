@@ -2,16 +2,12 @@
 <html lang="{{request.locale_name}}">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="pyramid web application">
-  <meta name="author" content="Pylons Project">
+  <meta name="author" content="Pedro Arthur">
   <link rel="shortcut icon" href="{{request.static_url('photos_webpage:static/pyramid-16x16.png')}}">
 
-  <title>Cookiecutter Starter project for the Pyramid Web Framework</title>
-
   <!-- Bootstrap core CSS -->
-  <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
   <!-- Custom styles for this scaffold -->
   <link href="{{request.static_url('photos_webpage:static/theme.css')}}" rel="stylesheet">
@@ -24,22 +20,26 @@
   </head>
 
   <body>
-    <ul>
-      <li><a href="{{ request.route_url('galery') }}">Galery</a></li>
-      <li><a href="{{ request.route_url('select') }}">Select</a></li>
-      <li><a href="{{ request.route_url('update') }}">Update</a></li>
-    </ul>
-
-    {% block content %}
-    <p>No content</p>
-    {% endblock content %}
+    <nav>
+      <ul>
+        <li><a href="{{ request.route_url('galery') }}">Galery</a></li>
+        <li><a href="{{ request.route_url('select') }}">Select</a></li>
+        <li><a href="{{ request.route_url('update') }}">Update</a></li>
+      </ul>
+    </nav>
+    <div class = 'main_content'>
+      {% block content %}
+      <p>No content</p>
+      {% endblock content %}
+    </div>
 
 
 
     <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
-      <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     </body>
     </html>
