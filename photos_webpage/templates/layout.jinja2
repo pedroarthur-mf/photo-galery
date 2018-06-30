@@ -11,20 +11,17 @@
 
   <!-- Custom styles for this scaffold -->
   <link href="{{request.static_url('photos_webpage:static/theme.css')}}" rel="stylesheet">
+  <link href="{{request.static_url('photos_webpage:static/image-picker.css')}}" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
-      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" integrity="sha384-f1r2UzjsxZ9T4V1f2zBO/evUqSEOpeaUUZcMTz1Up63bl4ruYnFYeM+BxI4NhyI0" crossorigin="anonymous"></script>
-    <![endif]-->
+  <title>{% if page_title %}{{ page_title }}{% endif %}</title>
   </head>
 
   <body>
     <nav>
       <ul>
-        <li><a href="{{ request.route_url('galery') }}">Galery</a></li>
-        <li><a href="{{ request.route_url('select') }}">Select</a></li>
-        <li><a href="{{ request.route_url('update') }}">Update</a></li>
+        <li><a href="{{ request.route_url('galery') }}">Sua Galeria</a></li>
+        <li><a href="{{ request.route_url('select') }}">Selecionar fotos</a></li>
+        <li><a href="{{ request.route_url('update') }}">Adicione novas fotos</a></li>
       </ul>
     </nav>
     <div class = 'main_content'>
@@ -41,5 +38,8 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      <script src="${request.static_url('photos_webpage:static/image-picker.min.js')}"></script>
+
+      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     </body>
     </html>

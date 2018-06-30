@@ -1,6 +1,31 @@
 {% extends "layout.jinja2" %}
 
 {% block content %}
-<h1>Selecione entre as fotos para mostrar na galeria</h1>
+ 
+{# <script src="{{request.static_url('photos_webpage:static/image-picker.min.js')}}"></script> #}
+
+<h1>Selecione as fotos para mostrar na galeria</h1>
+
+<div>
+
+	<select class="image-picker show-labels show-html">
+		<option data-img-src="http://placekitten.com/220/200" value="1">Cute Kitten 1</option>
+		<option data-img-src="http://placekitten.com/180/200" value="2">Cute Kitten 2</option>
+		<option data-img-src="http://placekitten.com/130/200" value="3">Cute Kitten 3</option>
+		<option data-img-src="http://placekitten.com/270/200" value="4">Cute Kitten 4</option>
+	</select>
+	{# {% for photo in photos %}
+		 <option data-img-src="{{photo.url}}" value="1">Cute Kitten 1</option>
+		 {% endfor %} #}
+		</div>
+		{# <form   method="POST" action="{{ request.current_route_url() }}"> #}
+	{# <select multiple="multiple" class="image-picker show-html">
+		<option data-img-src="http://placekitten.com/220/200" value="1">Cute Kitten 1</option>
+		<option data-img-src="http://placekitten.com/180/200" value="2">Cute Kitten 2</option>
+		<option data-img-src="http://placekitten.com/130/200" value="3">Cute Kitten 3</option>
+		<option data-img-src="http://placekitten.com/270/200" value="4">Cute Kitten 4</option>
+	</select> #}
+	{# <input type="submit" class="btn" name="save" value="Salvar"> #}
+{# </form> #}
 
 {% endblock content %}

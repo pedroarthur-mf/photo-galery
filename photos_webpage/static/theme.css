@@ -51,13 +51,13 @@ li a:hover{
   background-color: #00d8d8; 
 }
 
-
 .btn:hover{
   margin: 20px;
   background-color: #008b8b; 
 }
 
 .main_content {
+  display: none;
   margin: 20px;
    border-radius: 20px;
   text-align: center;
@@ -66,6 +66,22 @@ li a:hover{
   /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
-  background-color: #ccc;
+  background-color: #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
   padding: 20px;
 } 
+
+.galery{
+  width: 90%;
+  margin: 50px auto;
+  column-width: 33%;
+  column-gap: 0px;
+
+  column-count: 3;
+}
+
+.galery-image{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}

@@ -2,5 +2,12 @@
 
 {% block content %}
 <h1>Suas Fotos</h1>
-<img src="https://s3-sa-east-1.amazonaws.com/photosprojecttest/tumblr_o2s70jB1Mh1tb7k1ko2_1280.jpg">
+<div class="galery">
+	{% for photo in photos %}
+	<a href="{{photo.url}}" target="_blank">
+		<img src="{{photo.url}}" class="galery-image">
+	</a>
+		 
+	{% endfor %}
+</div>
 {% endblock content %}
