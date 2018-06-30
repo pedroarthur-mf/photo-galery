@@ -3,15 +3,15 @@
 {% block content %}
 <h1>Selecione suas fotos novas</h1><br>
 <div>
-	<form class="was-validated" accept-charset="utf-8"  enctype="multipart/form-data" method="POST" action="{{ request.current_route_url() }}">
-		<div class="custom-file">
-			<input type="file" name="photo" accept="image/png, image/jpeg" class="custom-file-input" id="validatedCustomFile" required>
-			<label class="custom-file-label" for="validatedCustomFile">Escolha um arquivo...</label>
-			<div class="invalid-feedback">Nenhum arquivo escolhido</div>
-		</div>
+    <form class="was-validated" accept-charset="utf-8"  enctype="multipart/form-data" method="POST" action="{{ request.current_route_url() }}">
+        <div class="custom-file">
+            <input type="file" name="photo" accept="image/png, image/jpeg" class="custom-file-input" id="validatedCustomFile" required>
+            <label class="custom-file-label" for="validatedCustomFile">Escolha um arquivo...</label>
+            <div class="invalid-feedback">Nenhum arquivo escolhido</div>
+        </div>
 
-		<input type="submit" class="btn" name="send">
-	</form>
+        <input type="submit" class="btn" name="send">
+    </form>
 </div>
 
 
