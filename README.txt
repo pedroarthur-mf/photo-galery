@@ -1,4 +1,5 @@
-Photos
+This project was made to try internship vacancy. It's put a photo on AWS S3 and let you select which one you want to put on your gallery.
+
 ======
 
 Getting Started
@@ -20,9 +21,10 @@ Getting Started
 
     env/bin/pip install -e ".[testing]"
 
-- Run your project's tests.
-
-    env/bin/pytest
+- Intall some dependences to store files
+    
+    env/bin/pip install pyramid_storage
+    env/bin/pip install boto
 
 - Run your project.
 
