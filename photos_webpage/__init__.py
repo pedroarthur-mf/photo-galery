@@ -9,11 +9,11 @@ def main(global_config, **settings):
     config.include('pyramid_storage.s3')
     config.add_static_view('static', 'static', cache_max_age=3600)
    
-    config.add_route('home', '/')
+    # config.add_route('home', '/')
 
     config.add_route('update', '/update')
     config.add_route('select', '/select')
-    config.add_route('galery', '/galery')
+    config.add_route('galery', '/')
 
 
     config.scan()

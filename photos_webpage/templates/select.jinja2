@@ -1,32 +1,26 @@
 {% extends "layout.jinja2" %}
 
-{% block scripot %}   
-
-{% endblock scripot %}
-
 {% block content %}
 <h1>Selecione as fotos para mostrar na galeria</h1>
-<forms class="photo-form" method="POST" action="{{ request.current_route_url() }}">
+<form class="photo-form" method="POST" action="{{ request.current_route_url() }}">
     <div class="galery">
         {% for photo in photos %}
-        
-        {% if photo.visible == True %}
-        <label class="container">
-            <input type="checkbox" name="{{photo.name}}" value="True" checked>
-            <span class="checkmark"><img src="{{photo.url}}"></span>
-        </label>
-        {% else %}
-        <label class="container">
-            <input type="checkbox" name="{{photo.name}}" value="True">
-            <span class="checkmark"><img src="{{photo.url}}"></span>
-        </label>
-        {% endif %}
-
+            {% if photo.visible == True %}
+                <label class="container">
+                    <input type="checkbox" name="visible" value="{{photo.name}}" checked>
+                    <span class="checkmark"><img src="{{photo.url}}"></span>
+                </label>
+            {% else %}
+                <label class="container">
+                    <input type="checkbox" name="visible" value="{{photo.name}}">
+                    <span class="checkmark"><img src="{{photo.url}}"></span>
+                </label>
+            {% endif %}
         {% endfor %}
 
     </div>
     <input type="submit" class="btn" name="send" value="Salvar">
-</forms>
+</form>
 
 
 
