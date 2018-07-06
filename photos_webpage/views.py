@@ -22,7 +22,7 @@ def galery(request):
              renderer='templates/update.jinja2')
 def update_photo(request):
     file_name = request.storage.save(request.POST['photo'], randomize=True)
-    url = "https://s3-sa-east-1.amazonaws.com/photosprojecttest/" + request.storage.url(file_name)
+    url = "https://s3-sa-east-1.amazonaws.com/<name of your bucket>/" + request.storage.url(file_name)
     functions = PhotosFunction()
     functions.insert(file_name, url)
     return {'page_title': 'Update',
