@@ -25,7 +25,11 @@ Getting Started
     
     env/bin/pip install pyramid_storage
     env/bin/pip install boto
-
+    
+- Configure AWS S3
+    Change the infos in the file development.ini to your AWS account security infos.
+    Change inthe file view.py in the link found in line 25 to the name of your AWS S3's bucket.
+    
 - Run your project.
 
     env/bin/pserve development.ini
