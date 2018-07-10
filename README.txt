@@ -11,25 +11,32 @@ Getting Started
 
 - Create a Python virtual environment.
 
-    python3 -m venv env
+     virtualenv env
+     
+- Activate your env
+    
+    source $PATH_TO_YOUR_ENV$/bin/activate
 
 - Upgrade packaging tools.
 
-    env/bin/pip install --upgrade pip setuptools
+    pip install --upgrade pip setuptools
 
 - Install the project in editable mode with its testing requirements.
 
-    env/bin/pip install -e ".[testing]"
+    pip install -e ".[testing]"
 
 - Intall some dependences to store files
     
-    env/bin/pip install pyramid_storage
-    env/bin/pip install boto
+    pip install pyramid_storage
+    pip install boto
     
+- Intall pymongo
+    pip install pymongo
+
 - Configure AWS S3
     Change the infos in the file development.ini to your AWS account security infos.
     Change inthe file view.py in the link found in line 25 to the name of your AWS S3's bucket.
     
 - Run your project.
 
-    env/bin/pserve development.ini
+    pserve development.ini
